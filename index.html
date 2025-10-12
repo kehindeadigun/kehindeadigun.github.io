@@ -4,38 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A simple floating card for a blog page">
-
-  <!-- Preconnect to fonts -->
+  <meta name="description" content="Join our Newsletter page">
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Load fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-
-  <!-- 🧠 Preload the hero (LCP) image early -->
-  <link rel="preload" fetchpriority="high" as="image" href="./assets/Cactus.jpg" type="image/jpeg">
-
-  <!-- Load your stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
-
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="96x96" />
-
-  <title>devChallenges.io | Minimal Blog Card</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+  <title>Join Our Newsletter | devChallenges.io</title>
 </head>
 
 <body>
-  <div class="card-container">
-    <section class="content-card">
-      <img src="./assets/Cactus.jpg" alt="Image of a small Cactus plant">
-      <p class="article-icon">Design</p>
-      <p class="article-title">Embracing Minimalism</p>
-      <p class="article-text">From minimalist sculptures to minimalist paintings, this blog will inspire you to
-        appreciate the beauty that lies in simplicity.</p>
-      <hr id="line-break">
-      <p class="article-author">Annie Spratt</p>
+  <main>
+    <section class="section-container">
+      <img class="logo" src="./resources/logo.svg">
+      <h1>Join our newsletter</h1>
+      <p class="desc-text">Keep up with our latest collections, exclusive deals, and special offers! We introduce a new
+        collection every
+        week, so stay tuned to snag the hottest items just for you.</p>
+      <form class="form">
+        <input type="email" name="email" id="name" placeholder="Enter your email address">
+        <button class="submit-button" type="submit">Subscribe now</button>
+        <p class="subtext">Your email is 100% confidential and won't send you any spam.</p>
+      </form>
     </section>
-  </div>
+  </main>
 </body>
-
 </html>
