@@ -4,48 +4,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A simple FAQ page">
-  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <meta name="description" content="A review page">
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 
-  <title>Simple FAQ | devChallenges.io</title>
+  <title>Testimonial Page | devChallenges.io</title>
 </head>
 
 <body>
   <main>
-    <header>
-      <h1>Frequently Asked Questions</h1>
-      <p>Browse through the most frequently asked questions</p>
-    </header>
-    <section class="faq-section">
-      <article>
-        <h2>How can I track my order?</h2>
-        <p>You can track your order using the following steps</p>
-        <ol>
-          <li>Go to the Order <a href="#">Tracking page</a>.</li>
-          <li>Enter your order number and email address.</li>
-          <li>Click on the Track Order button to view the current status of your shipment.</li>
-        </ol>
-        <p>If you encounter any issues, please visit our <a href="#">Help Center</a>.</p>
-      </article>
-      <hr>
-      <article>
-        <h2>What is your return policy?</h2>
-        <p>We offer a 30-day return policy on most items. Here are some key points</p>
-        <ul>
-          <li><span class="bold-text">Items must be in original condition:</span>Unworn, unused, and unwashed.</li>
-          <li><span class="bold-text">Include original packaging and tags:</span>All items should be returned with their original packaging and tags.</li>
-          <li><span class="bold-text">Proof of purchase:</span>A receipt or proof of purchase is required.</li>
-        </ul>
-        <p>For more detailed information, read our full <a href="#">Return Policy</a>.</p>
-      </article>
-    </section>
+    <article class="review-article">
+      <div class="article-logo">⭐️</div>
+      <h1 class="article-header">Reviewers</h1>
+      <p class="article-text">Reviewers is where people can access guidelines, checklists, and other tools to assist them in reviewing papers
+        or manuscripts. It provides a structured approach to ensure that the review process is thorough, efficient, and
+        consistent.</p>
+      <ul class="checklist" aria-roledescription="checklist">
+        <img class="done-icon" alt="checklist done icon" src="./resources/Done_ring_round_fill.svg"><li>Checklist to Review an Academic Paper</li>
+        <img class="done-icon" alt="checklist done icon" src="./resources/Done_ring_round_fill.svg"><li>Peer Review Checklist</li>
+        <img class="done-icon" alt="checklist done icon" src="./resources/Done_ring_round_fill.svg"><li>Checklist for Editors, Reviewers, and Authors of SPIE Journals</li>
+      </ul>
+    </article>
 
+    <div class="reviewer-card google-review">
+      <div class="review-icon-container">
+        <img class="company-logo" alt="Google company logo" src="./resources/google-testimonial.svg">
+        <ul class="star-rating-container">
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gray star icon" src="./resources/Star_fill_gray.svg"></li>
+        </ul>
+      </div>
+      <p class="reviewer-name">Samantha Lee</p>
+      <p class="reviewer-text">The checklist ensures that the review process is thorough</p>
+    </div>
+
+    <div class="reviewer-card meta-review">
+      <div class="review-icon-container">
+        <img class="company-logo" alt="Meta company logo" src="./resources/meta-testimonial.svg">
+        <ul class="star-rating-container">
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gold star icon" src="./resources/Star_fill.svg"></li>
+          <li><img class="star-icon" alt="A gray star icon" src="./resources/Star_fill.svg"></li>
+        </ul>
+      </div>
+      <p class="reviewer-name">Rachel Patel</p>
+      <p class="reviewer-text">I highly recommend the Writecream Business Description</p>
+    </div>
+  
   </main>
 </body>
 
