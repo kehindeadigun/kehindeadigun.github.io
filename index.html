@@ -4,49 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A simple FAQ page">
+  <meta name="description" content="Join our Newsletter page">
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
-
-  <title>Simple FAQ | devChallenges.io</title>
+  <title>Join Our Newsletter | devChallenges.io</title>
 </head>
 
 <body>
   <main>
-    <header>
-      <h1>Frequently Asked Questions</h1>
-      <p>Browse through the most frequently asked questions</p>
-    </header>
-    <section class="faq-section">
-      <article>
-        <h2>How can I track my order?</h2>
-        <p>You can track your order using the following steps</p>
-        <ol>
-          <li>Go to the Order <a href="#">Tracking page</a>.</li>
-          <li>Enter your order number and email address.</li>
-          <li>Click on the Track Order button to view the current status of your shipment.</li>
-        </ol>
-        <p>If you encounter any issues, please visit our <a href="#">Help Center</a>.</p>
-      </article>
-      <hr>
-      <article>
-        <h2>What is your return policy?</h2>
-        <p>We offer a 30-day return policy on most items. Here are some key points</p>
-        <ul>
-          <li><span class="bold-text">Items must be in original condition:</span>Unworn, unused, and unwashed.</li>
-          <li><span class="bold-text">Include original packaging and tags:</span>All items should be returned with their original packaging and tags.</li>
-          <li><span class="bold-text">Proof of purchase:</span>A receipt or proof of purchase is required.</li>
-        </ul>
-        <p>For more detailed information, read our full <a href="#">Return Policy</a>.</p>
-      </article>
+    <section class="section-container">
+      <img class="logo" src="./resources/logo.svg" alt="Our Logo, a mountain bounded in a pentagon">
+      <h1>Join our newsletter</h1>
+      <p class="desc-text">Keep up with our latest collections, exclusive deals, and special offers! We introduce a new
+        collection every
+        week, so stay tuned to snag the hottest items just for you.</p>
+      <form class="form">
+        <input type="email" name="email" id="name" placeholder="Enter your email address">
+        <button class="submit-button" type="submit">Subscribe now</button>
+        <p class="subtext">Your email is 100% confidential and won't send you any spam.</p>
+      </form>
     </section>
-
   </main>
 </body>
-
 </html>
