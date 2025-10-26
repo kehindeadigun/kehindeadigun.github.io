@@ -4,163 +4,68 @@
     box-sizing: border-box;
 }
 
-:root {
-    font-size: 16px;
-}
-
 body {
     height: 100vh;
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
-    padding: 0 min(40px, 3.125%);
+    background-color: #F8FAFC;
 }
 
 header {
-    margin: 2.5rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    max-width: 600px;
-}
-
-p {
-    line-height: 1.7rem;
-}
-
-.logo {
-    height: 32px;
+    text-align: center;
+    padding: 3.5rem 0;
+    background-color: #FFFFFF;
 }
 
 h1 {
-    text-align: center;
     font-weight: 600;
-    font-size: 2rem;
-    max-width: 510px;
+    font-size: 2.25rem;
 }
 
-.header-description {
-    text-align: center;
-    color: #52525A;
+h2, p {
+    margin: 1.5rem 0;
 }
 
-.card-container {
-    background-color: #F3F4F6;
-    padding: 1.5rem;
-    border-radius: 1rem;
+ol, ul {
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+
+.faq-section {
+    background-color: #F8FAFC;
+    padding: min(5%, 3rem) max(1%, 10px);
     display: grid;
-    gap: 1.5rem;
+    align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card {
-    background-color: #FFFFFF;
-    display: grid;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 600px;
-    height: auto;
-}
-
-.card-title {
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.card-description {
-    margin-top: 0.75rem; 
-    margin-bottom: 1.5rem; 
-}
-
-.card-image-container {
-    max-width: 500px;
-    height: 100%;
-}
-
-.card-image {
     width: 100%;
 }
 
-@media screen and (min-width: 650px) {
-
-    .card-container {
-        background-color: #F3F4F6;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    .card {
-        max-width: none;
-    }
-
-    .card-three,
-    .card-four,
-    .card-five {
-        grid-column: span 2;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1rem;
-        height: 270px;
-    }
-
-    .card-four {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-
-    .card-three .card-image, 
-    .card-four .card-image,
-    .card-five .card-image {
-        height: 90%;
-        width: auto;
-    }
+article {
+    max-width: 700px;
+    line-height: 1.5rem;
 }
 
-@media screen and (min-width: 1000px) {
-
-    .card-container {
-        background-color: #F3F4F6;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    .card {
-        grid-column: span 2;
-        max-width: none;
-        display: block;
-    }
-
-    .card-three {
-        height: auto;
-    }
-
-    .card-three .card-image {
-        height: auto;
-        width: 100%;
-    }
-
-    .card-four, 
-    .card-five {
-        grid-column: span 3;
-        display: flex;
-    }
-
-    .card-four .card-description,
-    .card-five .card-description {
-        margin-bottom: 0;
-    }
-    
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    color: #4E80EE;
+    text-decoration: none;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+hr {
+  width: min(95%, 600px);
+  border: none;
+  border-top: 1px solid #D2D5DA;
+  margin: 1.6rem 0;
+}
