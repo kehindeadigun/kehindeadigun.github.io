@@ -4,68 +4,77 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    background-color: #F8FAFC;
+:root {
+    font-size: 16px;
 }
 
-header {
-    text-align: center;
-    padding: 3.5rem 0;
-    background-color: #FFFFFF;
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    padding: 2.625rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 3.2rem;
 }
 
 h1 {
-    font-weight: 600;
+    text-align: center;
     font-size: 2.25rem;
+    font-weight: 600;
+    max-width: 750px;
 }
 
-h2, p {
-    margin: 1.5rem 0;
+#separator {
+    height: 1.1rem;
 }
 
-ol, ul {
-    list-style-position: outside;
-    padding-left: 1.5rem;
-}
-
-.faq-section {
-    background-color: #F8FAFC;
-    padding: min(5%, 3rem) max(1%, 10px);
-    display: grid;
+.article-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    gap: 3.25rem;
+    max-width: 750px;
 }
 
-article {
-    max-width: 700px;
-    line-height: 1.5rem;
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.67rem;
+}
+
+.text-container {
+    max-width: 400px;
 }
 
 h2 {
+    font-size: 1.25rem;
     font-weight: 600;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-li {
-    margin: 0.5rem 0;
+.article-preview-image {
+    width: 10rem;
+    height: auto;
+    border-radius: 12px;
 }
 
-a {
-    color: #4E80EE;
-    text-decoration: none;
+time {
+    color: #4D5562;
 }
 
-.bold-text{
-    font-weight: bold;
-}
+@media screen and (min-width: 800px) {
+    .article {
+        gap: 3rem;
+    }
 
-hr {
-  width: min(95%, 600px);
-  border: none;
-  border-top: 1px solid #D2D5DA;
-  margin: 1.6rem 0;
+    .text-container {
+        max-width: 530px;
+    }
+    
 }
