@@ -6,66 +6,94 @@
 
 body {
     height: 100vh;
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-    background-color: #F2F5F9;
-    padding: 124px 1%;
+    background-image: url('resources/Background_image.svg');
+    background-size: cover;
+    background-color: #121826;
+    font-family: "Outfit", sans-serif;
 }
 
-.business-card {
-    margin: 0 auto;
-    border-radius: 1rem;
-    padding-bottom: 24px;
-    background-color: #FFFFFF;
-    width: 400px;
-
-    border-radius: 0.75rem 0.75rem 0 0;
-    overflow: hidden;
+main {
+    padding: min(10vh, 3rem) min(3%, 3rem);
 }
 
-.overlay-image {
-    position: absolute;
-    width: 400px;
-    top: 340px;
-}
-
-.card-title {
-    font-family: "Poppins", "Lato", sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    padding: 0 32px;
-    margin-bottom: 0.75rem;
-}
-
-.card-subtitle {
-    padding: 0 32px;
-}
-
-.hr {
-    margin: 1.5rem 0;
-    border-top: 2px solid #F2F5F9;
-}
-
-.author-details {
-    padding: 0 32px;
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.author-image {
-    border-radius: 50%;
-    height: 2.5rem;
-}
-
-.author-name {
+h1 {
+    color: #E5E7EB;
+    text-align: center;
     font-weight: 600;
+    font-size: 2.5rem;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.author-location {
-    font-size: 0.875rem;
+.header-description {
+    color: #9DA3AE;
+    text-align: center;
+    margin: 1rem 0;
 }
 
-.grey-text {
-    color: #4A5567;
+.product-cards-container {
+    margin: 3rem auto;
+    display: grid;
+    justify-content: center;
+    gap: 2.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #212936;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 19.75rem;
+}
+
+.product-card:hover {
+    cursor: pointer;
+    border: 1px solid #E5E7EB;
+    transition: border 0.3s ease-in-out;
+}
+
+.card-icon {
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.yellow-backdrop {
+    background-color: #FCEED8;
+}
+
+.blue-backdrop {
+    background-color: #DEE9FC;
+}
+
+.pink-backdrop {
+    background-color: #FBE5E6;
+}
+
+.card-header {
+    color: #E5E7EB;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: #E5E7EB;
+    margin-bottom: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+@media screen and (min-width: 700px) {
+
 }
