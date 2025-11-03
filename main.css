@@ -4,209 +4,212 @@
     box-sizing: border-box;
 }
 
-:root {
-    font-size: 16px;
-}
-
 body {
     height: 100vh;
-    font-family: "Outfit", sans-serif;
-    background-color: #FFFEFE;
-    padding: 3.125%;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.header-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+header {
+    position: absolute;
+    padding-left: calc(5vw + 1.5rem);
+    top: calc(1rem + (96*100vw/640));
+    max-width: 800px;
 }
 
 main {
-    margin: 0 auto;
-    display: grid;
-    border-radius: 1rem;
-    background-color: #F3F4F6;
-    grid-template-rows: auto repeat(6, 25rem);
-    justify-content: center;
-    max-width: 1200px;
-    background-image: url("./resources/Background_decor.svg");
-    background-position: left top;
-    background-repeat: no-repeat;
+    position: absolute;
+    max-width: 1280px;
+    padding-left: 5vw;
 }
 
-/* Page Information Card */
+.cards-container {
+    display: grid;
+    column-gap: 2rem;
+    max-width: 1000px;
+}
 
-.card {
-    padding: 0 1.5rem;
-    position: relative;
+.one {
+    --process-height: 24px;
+    --header-height: 381px;
+    padding-top: clamp(500px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 30vw
+            + 3rem /*margin-top*/
+        ), 600px);
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #374151;
+    font-weight: 800;
 }
 
-.team-text {
-    padding: 1.7rem;
-    display: grid;
-    gap: 0.5rem;
-    min-height: 18rem;
+.header-highlight {
+    color: #6B59D0;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
 }
 
-.opener-text {
-    color: #263FA9;
+
+p {
+    font-size: 1.125rem;
 }
 
-.opener-desc {
-    color: #394150;
+
+.purple {
+    color: #6B59D0;
 }
 
-/* General Card Information */
 
-.team-lead-card {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.component-card {
+    max-width: 16.2rem;
+    border-left: 1px dotted #DEDDEB;
 }
 
-.info-container {
-    position: absolute;
-    bottom: 20px;
+
+.component-image {
+    padding-left: 1.25rem;
 }
 
-.see-all-members .info-container {
-    display: flex;
-    gap: 0.25rem;
-    align-items: center;
+
+.component-header {
+    border-left: 2px solid #6B59D0;
+    padding-left: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 2rem 0 1.25rem;
 }
 
-.member-name, .member-title {
-    color: #FFFFFF;
+.component-description {
+    padding-left: 1.25rem;
+    color: #6B7280;
+    line-height: 2rem;
 }
 
-.member-name {
-    font-size: 1.25rem;
-    font-weight: 500;
+.purple-text {
+    color: #6B59D0;
 }
 
-.member-title {
-    color: 1.25rem;
-    font-weight: 300;
-}
-
-/* Individual Card Information */
-
-.one {
-    background-color: #C1B6F8;
-    background-image:
-        linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-        ), url("./resources/person_1@2x.png");
-}
-
-.two {
-    background-color: #EDACD2;
-    background-image:
-        linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-        ), url("./resources/person_2@2x.png");
-}
-
-.three {
-    background-color: #9DC4F8;
-    background-image:
-        linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-        ), url("./resources/person_3@2x.png");
-}
-
-.four {
-    background-color: #F8D8B0;
-    background-image:
-        linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-        ), url("./resources/person_4@2x.png");
-}
-
-.five {
-    background-color: #86E7D4;
-    background-image:
-        linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-        ), url("./resources/person_5@2x.png");
-}
-
-@media screen and (min-width:600px) {
-
-    body {
-        padding: 7.2%;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr); 
-        grid-template-areas:
-            "team  team team"
-            "one  two   three"
-            "allmembers four five";
-        overflow: hidden;
-    }
-
-    .card {
-        position: relative;
-        max-width: 20rem;
-    }
-
-    .see-all-members{
-        grid-area: allmembers;
-    }
-
-    .team-text {
-        grid-area: team;
-        max-width: 67%;
-        background-image: none;
-    }
-
+@media screen and (min-width: 420px) {
     .one {
-        grid-area: one;
-    }
-
-    .two {
-        grid-area: two;
-    }
-
-    .three {
-        grid-area: three;
-    }
-
-    .four {
-        grid-area: four;
-    }
-
-    .five {
-        grid-area: five;
-    }
-
+    --process-height: 24px;
+    --header-height: 381px;
+    padding-top: clamp(500px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 2rem /*margin-top*/
+        ), 700px);
+}
 }
 
-@media screen and (min-width:1100px) {
-    main {
+@media screen and (min-width: 500px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .component-card {
+        height: 100%;
+    }
+
+    .one, .two {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(390px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 40vw
+            + 2rem /*margin-top*/
+            + 0.75rem
+        ), 600px);
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .cards-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 18rem);
-        justify-content: center;
-        align-content: center;
-        grid-template-areas:
-            "team team one two"
-            "allmembers three four five";
+        grid-template-rows: 100vh;
     }
 
-    .team-text {
-        max-width: 90%;
+    .one, .two, .three, .four {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(390px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 3rem /*margin-top*/
+        ), 700px);
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .one, .two, .three, .four {
+        --process-height: 24px;
+        --header-height: 381px;
+        padding-top: clamp(450px, calc((96 * 100vw / 640)
+            /*backdrop-image height*/
+            + 1rem
+            /*backdrop-image margin*/
+            + var(--process-height)
+            /*--process text height*/
+            + 1.25rem
+            /*process text margin*/
+            + var(--header-height)
+            /*header text height*/
+            + 5rem
+            /*header text margin*/
+            - 35vw
+            + 3rem /*margin-top*/
+        ), 700px);
     }
 }
