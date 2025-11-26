@@ -1,68 +1,58 @@
-let menuButtonToggle = document.querySelectorAll('.menu-button');
-let closeButton = document.querySelectorAll('.close-icon');
-let mobileNav = document.querySelector('.select-nav');
+let columns = document.querySelectorAll(".plan-column");
+let whiteTick = "./resources/check-white.svg";
+let darkTick = "./resources/check-dark.svg";
+let whiteArrow = "./resources/down arrow-white.svg";
+let blueArrow = "./resources/down arrow-blue.svg";
+let selected = document.querySelector(".plan-column.selected"); // default $99
 
-// mobile menu event listeners
+function applyDark(col) {
+    let ticks = col.querySelectorAll(".tick");
+    ticks.forEach(t => t.src = whiteTick);
 
-function showMenu() {
-    mobileNav.style.display = 'block';
+    let arrow = col.querySelector(".plan-cto");
+    if (arrow) arrow.src = whiteArrow;
+
+    col.style.setProperty('--heading-color', '#FFFFFF');
+    col.style.setProperty('--plan-text', '#FFFFFF');
+    col.style.setProperty('--month-color', '#FFFFFF');
+    col.style.setProperty('--footer-color', '#d99426');
+    col.style.setProperty('--name-color', '#263FA9');
+    col.style.backgroundColor = '#121826';
 }
 
-function hideMenu() {
-    mobileNav.style.display = 'none';
+function applyLight(col) {
+    let ticks = col.querySelectorAll(".tick");
+    ticks.forEach(t => t.src = darkTick);
+
+    let arrow = col.querySelector(".plan-cto");
+    if (arrow) arrow.src = blueArrow;
+    
+    col.style.setProperty('--heading-color', '#121826');
+    col.style.setProperty('--plan-text', '#263FA9');
+    col.style.setProperty('--month-color', '#4D5562');
+    col.style.setProperty('--footer-color', '#FFFFFF');
+    col.style.setProperty('--name-color', '#FFFFFF');
+    col.style.backgroundColor = '#FFFFFF';
 }
 
-menuButtonToggle.forEach(ele => ele.addEventListener('click', showMenu));
-closeButton.forEach(ele => ele.addEventListener('click', hideMenu));
+columns.forEach(col => {
 
-let lightMoon = "./resources/Moon_fill_light.svg";
-let darkMoon = "./resources/Moon_fill.svg";
+    col.addEventListener("mouseenter", () => {
+        // lighten the selected column if it's NOT the hovered one
+        if (selected !== col) {
+            applyLight(selected);
+        }
 
-let lightSun = "./resources/Sun_fill_light.svg";
-let darkSun = "./resources/Sun_fill.svg";
+        // darken the hovered column
+        applyDark(col);
+    });
 
-
-let sunImages = document.querySelectorAll(".sun-button");
-let moonImages = document.querySelectorAll(".moon-button");
-
-let modeToggle = document.querySelectorAll(".mode-toggle");
-
-
-// set the default color mode and checkbox values
-
-function setStartupColors () {
-    let colorMode = localStorage.getItem("color-mode");
-    let toggleKnobs = document.querySelectorAll(".knob");
-    sunImages.forEach(ele => ele.src = (colorMode === "dark") ? lightSun: darkSun);
-    moonImages.forEach(ele => ele.src = (colorMode === "dark") ? darkMoon: lightMoon);
-    if (colorMode=="dark"){
-        toggleKnobs.forEach(knob => knob.style.left = "2px");
-    }
-}
-
-document.addEventListener("DOMContentLoaded", setStartupColors);
-
-
-// Toggle buttons and screen mode
-
-function changeColorMode(event) {
-    console.log('Triggered!')
-    let currentMode = document.documentElement.getAttribute("data-theme");
-    let newMode = currentMode==="dark" ? "light": "dark";
-
-    let newState = event.target.checked;
-    modeToggle.forEach(e => e.checked = newState);
-    console.log(newState)
-    console.log(newMode)
-
-    // set images and data for light or dark mode
-    sunImages.forEach(ele => ele.src = (newMode === "dark") ? lightSun: darkSun);
-    moonImages.forEach(ele => ele.src = (newMode === "dark") ? darkMoon: lightMoon);
-
-    document.documentElement.setAttribute("data-theme", newMode);
-    localStorage.setItem("color-mode", newMode);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    modeToggle.forEach((ele) => ele.addEventListener("change", changeColorMode));
+    col.addEventListener("mouseleave", () => {
+        // lighten the hovered column (if it's not selected)
+        if (col !== selected) {
+            applyLight(col);
+        }
+        // restore selected column to dark
+        applyDark(selected);
+    });
 });
