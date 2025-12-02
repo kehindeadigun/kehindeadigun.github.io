@@ -424,8 +424,8 @@ footer li {
     .components-section {
         padding: 6rem var(--gen-padding);
         background-image: url("./resources/section_bg_1.png");
-        background-repeat: no-repeat;
         background-size: cover;
+        min-height: 750px;
     }
 
     .hero-img-container {
