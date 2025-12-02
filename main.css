@@ -269,8 +269,8 @@ h2 {
     font-size: 0.875rem;
 }
 
-.img-section > :nth-child(2),
-.img-section > :nth-child(4) {
+.two,
+.four {
   margin-bottom: 2.5rem;
 }
 
@@ -395,8 +395,18 @@ footer li {
         height: auto;
     }
 
-    .img-section > :nth-child(2),
-    .img-section > :nth-child(4) {
+    .three {
+        grid-column: 2/span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .four {
+       grid-column: 1/span 1;
+       grid-row: 2 / span 1; 
+    }
+
+    .two,
+    .four {
         margin-bottom: 0;
     }
 
