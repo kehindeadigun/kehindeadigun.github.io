@@ -8,187 +8,284 @@
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
 
   <meta name="description" content="Hufie Homepage Challenge">
-  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
-  <link rel="stylesheet" href="./main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
-    rel="stylesheet">
-  <title>Advanced Homepage - Hufie | devChallenges.io</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+
+  <title>Bank Dashboard - HBank | devChallenges.io</title>
 </head>
 
 <body>
-
-  <nav>
-    <img class="logo" src="./resources/logo.svg" alt="hufie logo">
-    <div class="nav-button-container">
-      <p><a href="#">Log In</a></p>
-      <button class="button button--green">Sign Up</button>
-    </div>
-  </nav>
-
   <header>
-    <article>
-      <div class="version">
-        <img class="version__icon" src="./resources/waterdrop.svg" alt="waterdrop version icon">version 4.0.1
-      </div>
-      <h1>Where data and creativity come together.</h1>
-      <p class="header-desc">The fastest way to build and deploy websites with resusable components.</p>
-      <div class="header-button-container">
-        <button class="button button--green header-button">GET STARTED</button>
-        <p><a href="#">VIEW DEMO</a></p>
-      </div>
-    </article>
-    <div class="hero-img-container">
-      <img class="hero-img" src="./resources/hero-image@2x.png" alt="hero image of design card">
+    <img class="logo" alt="logo" src="./resources/hbank-logo.svg">
+    <div class="profile">
+      <img class="profile__icon" alt="logo" src="./resources/avatar@2x.png">
+      <p class="profile__name">Ethan Sutcliffe</p>
     </div>
   </header>
-
   <main>
+    <nav>
+      <ul class="nav-header">
+        <li class="nav-section">
+          <a href="#" class="nav-item">
+            <img class="nav-icon" alt="" src="./resources/house.svg">
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </li>
 
-    <section class="components-section">
-      <h2>This is new creative process</h2>
-      <p class="components-subtitle">Quisque eleifend velit vel erat fringilla interdum</p>
+        <li class="nav-section">
+          <p class="nav-title">ANALYTICS</p>
+          <ul class="nav-links">
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/show chart-1.svg">
+                <span class="nav-text">Performance</span>
+              </a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/Archery.svg">
+                <span class="nav-text">Hotjar</span>
+              </a>
+              <span class="notif-new">New</span>
+            </li>
+          </ul>
+        </li>
 
-      <div class="comp-card-container">
-        <div class="card">
-          <p class="card__icon blue">🎨</p>
-          <p class="card__title">200+ cloneable components</p>
-          <p class="card__text">Suspendisse id tortor venenatis, blandit lacus ut, efficitur diam. Proin vulputate nisl
-            vel sem consequat euismod. </p>
-        </div>
+        <li class="nav-section">
+          <p class="nav-title">SUPPORT</p>
+          <ul class="nav-links">
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/ticket.svg">
+                <span class="nav-text">Tickets</span>
+              </a>
+              <span class="notif-count">18</span>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/account.svg">
+                <span class="nav-text">Agents</span>
+              </a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/users.svg">
+                <span class="nav-text">Customers</span>
+              </a>
+            </li>
+          </ul>
+        </li>
 
-        <div class="card">
-          <p class="card__icon gold">🎯</p>
-          <p class="card__title">Complete style guild for projects</p>
-          <p class="card__text">Suspendisse id tortor venenatis, blandit lacus ut, efficitur diam. Proin vulputate nisl
-            vel sem consequat euismod.</p>
-        </div>
+        <li class="nav-section">
+          <p class="nav-title">SHOP</p>
+          <ul class="nav-links">
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/shop.svg">
+                <span class="nav-text">Products</span>
+              </a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/basket.svg">
+                <span class="nav-text">Orders</span>
+              </a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-item">
+                <img class="nav-icon" alt="" src="./resources/chat info.svg">
+                <span class="nav-text">Reports</span>
+              </a>
+            </li>
+          </ul>
+        </li>
 
-        <div class="card">
-          <p class="card__icon green">🌸</p>
-          <p class="card__title">Modern & beautiful landing page</p>
-          <p class="card__text">Suspendisse id tortor venenatis, blandit lacus ut, efficitur diam. Proin vulputate nisl
-            vel sem consequat euismod.</p>
-        </div>
 
-        <div class="card">
-          <p class="card__icon purple">⚙️</p>
-          <p class="card__title">Built in multiple ways</p>
-          <p class="card__text">Suspendisse id tortor venenatis, blandit lacus ut, efficitur diam. Proin vulputate nisl
-            vel sem consequat euismod.</p>
+      </ul>
+
+      <ul class="nav-footer">
+        <li class="nav-list-item">
+          <a href="#" class="nav-item">
+            <img class="nav-icon" alt="" src="./resources/Setting.svg">
+            <span class="nav-text">Settings</span>
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-item">
+            <img class="nav-icon" alt="" src="./resources/Logout.svg">
+            <span class="nav-text">Logout</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <section class="card-details-container">
+      <div class="card-details">
+        <div class="card-details__content">
+          <div class="inventory-subheader">
+            <h2 class="detail-title">Card Details</h2>
+          </div>
+          <div class="credit-card-wrapper vertical">
+            <div class="credit-card">
+              <div class="card-top lightgreen">
+                <div>
+                  <span>Shopping Card</span>
+                  <img class="card-icon" alt="" src="./resources/card.svg">
+                </div>
+                <div>
+                  <p>NAME</p>
+                  <p>Exp 26/6</p>
+                </div>
+              </div>
+              <div class="card-bottom darkgreen">
+                <div>
+                  <span class="card-number">**** **** 7800</span>
+                  <img class="visa-icon" alt="" src="./resources/visa-logo.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-num">
+            <p class="card-num__title">CARD NUMBER</p>
+            <p class="card-num__val">**** 1234 4567 7800</p>
+          </div>
+          <div class="card-data">
+            <div class="card-data__col">
+              <p class="card-data__title">EXPIRE DATE</p>
+              <p class="card-data__val">08/28</p>
+            </div>
+            <span class="ver-divider"></span>
+            <div class="card-data__col">
+              <p class="card-data__title">CVV</p>
+              <p class="card-data__val">288</p>
+            </div>
+            <span class="ver-divider"></span>
+            <div class="card-data__col">
+              <p class="card-data__title">LEVEL</p>
+              <p class="card-data__val">02</p>
+            </div>
+          </div>
+          <span class="hor-divider"></span>
+          <p class="detail-title">Spending limits</p>
+          <div class="spending-data">
+            <p class="spending-data__title">DAILY TRANSACTION LIMIT</p>
+            <div class="spend-bar lightgreen">
+              <div class="darkgreen"></div>
+            </div>
+            <p class="spending-data__val">$400 spent of $2000</p>
+          </div>
         </div>
       </div>
-
     </section>
 
+    <section class="inventory-details-container">
+      <div class="inventory-details">
+        <div class="inventory-subheader">
+          <h2 class="detail-title">Inventory Details</h2>
+        </div>
+        <div class="balance-card">
+          <div class="card-left">
+            <p>Your balance:</p>
+            <p class="balance">$25,330</p>
+            <p>3 cards</p>
+          </div>
+          <div class="card-right">
+            <button class="details-button">
+              <span>Details</span>
+              <img class="nav-icon" alt="" src="./resources/arrow.svg">
+            </button>
+          </div>
+        </div>
 
-    <section class="img-section">
+        <div class="inventory-subheader">
+          <h2 class="detail-title">Inventory Details</h2>
+          <span class="notif-count">2</span>
+        </div>
 
-      <div class="section-img-container one">
-        <picture>
-          <!-- Mobile first (under 750px) -->
-          <source media="(max-width: 749px)" srcset="./resources/section-1@2x.png">
+        <div class="card-container">
+          <div class="credit-card">
+            <div class="card-top lightpurple">
+              <div>
+                <span>Shopping Card</span>
+                <img class="card-icon" alt="" src="./resources/card.svg">
+              </div>
+              <div>
+                <p>NAME</p>
+                <p>Exp 26/6</p>
+              </div>
+            </div>
+            <div class="card-bottom darkpurple">
+              <div>
+                <span class="card-number">**** **** 0928</span>
+                <img class="visa-icon" alt="" src="./resources/visa-logo.svg">
+              </div>
+            </div>
+          </div>
 
-          <!-- Desktop / bigger screens -->
-          <source media="(min-width: 750px)" srcset="./resources/section-1.png">
+          <div class="credit-card">
+            <div class="card-top lightorange">
+              <div>
+                <span>Shopping Card</span>
+                <img class="card-icon" alt="" src="./resources/card.svg">
+              </div>
+              <div>
+                <p>NAME</p>
+                <p>Exp 26/6</p>
+              </div>
+            </div>
+            <div class="card-bottom darkorange">
+              <div>
+                <span class="card-number">**** **** 4486</span>
+                <img class="visa-icon" alt="" src="./resources/visa-logo.svg">
+              </div>
+            </div>
+          </div>
 
-          <!-- Fallback image -->
-          <img class="section-img"
-              src="./resources/section-1.png"
-              alt="section image of design card for font sizing">
-        </picture>
+          <div class="credit-card__empty">
+            <img class="plus-icon" alt="" src="./resources/Plus.svg">
+            <span>Add Card</span>
+          </div>
+
+          <div class="use-summaries">
+            <div class="summary-container">
+              <img class="summary-icon darkgreen" alt="" src="./resources/show chart.svg">
+              <div class="summary">
+                <p class="summary-title">Earnings</p>
+                <p class="summary-price">$12,341</p>
+              </div>
+            </div>
+
+            <div class="summary-container">
+              <img class="summary-icon darkpurple" alt="" src="./resources/dollar coin.svg">
+              <div class="summary">
+                <p class="summary-title">Earnings</p>
+                <p class="summary-price">$12,341</p>
+              </div>
+            </div>
+
+
+            <div class="summary-container">
+              <img class="summary-icon darkorange" alt="" src="./resources/aim.svg">
+              <div class="summary">
+                <p class="summary-title">Earnings</p>
+                <p class="summary-price">$12,341</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
       </div>
-
-      <div class="article-card two">
-        <p class="article__icon blue">🎯</p>
-        <p class="article_title">200+ cloneable  components</p>
-        <p class="article__text">From navigation bars to modals, buttons to forms, our library has everything you need to jumpstart your development process.</p>
-        <ul class="article__list">
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Rapidly build your own design
-            system
-          </li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Maintain consistancy across your
-            website</li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Save hours in production time</li>
-        </ul>
-      </div>
-
-      <div class="section-img-container three">
-        <picture>
-          <!-- Mobile first (under 750px) -->
-          <source media="(max-width: 749px)" srcset="./resources/section-2@2x.png">
-
-          <!-- Desktop / bigger screens -->
-          <source media="(min-width: 750px)" srcset="./resources/section-2.png">
-
-          <!-- Fallback image -->
-          <img class="section-img"
-              src="./resources/section-2.png"
-              alt="section image of design card for brand types">
-        </picture>
-      </div>
-
-      <div class="article-card four">
-        <p class="article__icon gold">🎨</p>
-        <p class="article_title">Complete style guild for projects</p>
-        <p class="article__text">A comprehensive style guide can make all the difference in creating a cohesive and effective design.</p>
-        <ul class="article__list">
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Determine the key elements of your brand</li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Include guidelines for layout</li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Share your style guide with your team</li>
-        </ul>
-      </div>
-
-      <div class="section-img-container five">
-        <picture>
-          <!-- Mobile first (under 750px) -->
-          <source media="(max-width: 599px)" srcset="./resources/section-3@2x.png">
-
-          <!-- Desktop / bigger screens -->
-          <source media="(min-width: 600px)" srcset="./resources/section-3.png">
-
-          <!-- Fallback image -->
-          <img class="section-img"
-              src="./resources/section-3.png"
-              alt="section image of design card for mobile design">
-        </picture>
-      </div>
-
-      <div class="article-card six">
-        <p class="article__icon purple">🎨</p>
-        <p class="article_title">Built in multiple ways</p>
-        <p class="article__text">Our approach to content creation allows you to build your content in multiple ways, maximizing your efficiency and output.</p>
-        <ul class="article__list">
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Identify the core message of your content</li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Create a content calendar</li>
-          <li><img class="tick-icon" src="./resources/tick-icon.svg" alt="green tick">Repurpose your content by adapting</li>
-        </ul>
-      </div>
-
     </section>
+
 
   </main>
-  <footer>
-    <article>
-      <p class="footer-title">Always with the legendary customer <span class="green-text ">experience</span>.</p>
-      <ul class="overview-items">
-        <li>Overview</li>
-        <li>Glossary</li>
-        <li>FAQ</li>
-        <li>Style Guide</li>
-      </ul>
-      <ul class="typo-items">
-        <li>Colours</li>
-        <li>Typography</li>
-        <li>Shadow</li>
-        <li>Avatar</li>
-        <li>Buttons</li>
-      </ul>
-    </article>
-    <img class="logo--large" src="./resources/full-logo.svg" alt="hufie logo">
-  </footer>
 </body>
 
 </html>
