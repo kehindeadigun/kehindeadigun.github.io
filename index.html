@@ -9,140 +9,136 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./dist/main.css">
-  <script src="index.js" defer></script>
-  <meta name="description" content="Complete your device purchase securely. Review your cart and enter contact information to check out.">
-  <title>Device Shop Checkout | devChallenges.io</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+
+  <title>Subscription Checkout | devChallenges.io</title>
 </head>
+
 <body>
-  <div class="backdrop">
-  </div>
-  <main>
-    <div class="title">
-      <h1 class="title__header">Checkout</h1>
-      <span class="title__count">3 ITEMS</span>
-    </div>
-    <div class="payment-container">
-      <section class="payment-section">
-        <div class="cart-container">
-          <div class="items-container">
+  <form class="cost-form">
 
-            <div class="item">
-              <div class="item__image">
-                <img src="./resources/Gold@2x.png" alt="iPhone 12 Pro - Golden">
-              </div>
-              <div class="item__details">
-                <div class="item__header-container">
-                  <div class="item__header">
-                    <p class="item__name">iPhone 12 Pro</p>
-                    <p class="item__cost">$999.00</p>
-                  </div>
-                  <p class="item__description">Golden</p>
-                </div>
-                <div class="item__count">
-                  <p class="count">x 1</p>
-                  <img class="close-button" src="./resources/close-icon.svg" alt="Remove item">
-                </div>
-              </div>
+    <fieldset class="plan">
+      <div class="plan__wrapper">
+        <div class="plan__option-container">
+
+          <p class="plan__title">Starter Plan</p>
+
+          <label class="plan__card">
+            <input type="radio" name="subplan" id="monthly-plan" value="monthly">
+            <div class="plan__container">
+              <p class="plan__title">Pay monthly</p>
+              <p class="plan__description">$20/ Month/ Member</p>
             </div>
-            <div class="item">
-              <div class="item__image">
-                <img src="./resources/Apple-watch@2x.png" alt="Apple Watch - Blue">
-              </div>
-              <div class="item__details">
-                <div class="item__header-container">
-                  <div class="item__header">
-                    <p class="item__name">Apple Watch</p>
-                    <p class="item__cost">$399.00</p>
-                  </div>
-                  <p class="item__description">Blue</p>
-                </div>
-                <div class="item__count">
-                  <p class="count">x 1</p>
-                  <img class="close-button" src="./resources/close-icon.svg" alt="Remove item">
-                </div>
-              </div>
+          </label>
+
+          <label class="plan__card">
+            <input type="radio" name="subplan" id="annual-plan" value="annually">
+            <div class="plan__container">
+              <p class="plan__title">Pay Annual</p>
+              <p class="plan__description">$16/ Month/ Member</p>
             </div>
-            <div class="item">
-              <div class="item__image">
-                <img src="./resources/iMac@2x.png" alt="iMac - Green">
-              </div>
-              <div class="item__details">
-                <div class="item__header-container">
-                  <div class="item__header">
-                    <p class="item__name">iMac</p>
-                    <p class="item__cost">$1199.00</p>
-                  </div>
-                  <p class="item__description">Green</p>
-                </div>
-                <div class="item__count">
-                  <p class="count">x 1</p>
-                  <img class="close-button" src="./resources/close-icon.svg" alt="Remove item">
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="divider">
-          <form class="coupon">
-            <input type="text" name="coupon" placeholder="Enter coupon code">
-            <button class="button" type="submit">Apply Coupon</button>
-          </form>
-          <ul class="cost__list">
-            <li class="cost__item">
-              <p class="cost__title">Subtotal</p>
-              <p class="cost__value">$2597.00</p>
-            </li>
-            <li class="cost__item">
-              <p class="cost__title">Tax</p>
-              <p class="cost__value">$623.28</p>
-            </li>
-            <li class="cost__item">
-              <p class="cost__title cost__bold">Total</p>
-              <p class="cost__value cost__bold">$3220.28</p>
-            </li>
-          </ul>
+          </label>
+
         </div>
-        <div class="contact-form__container">
-          <p class="contact-form__header">Contact Information</p>
 
-          <form class="contact-form">
+        <hr class="divider">
 
-            <div class="contact-form__elem name">
-              <label for="name">First & Last name</label>
-              <input id="name" name="name" type="text" placeholder="Enter first & last name" autocomplete="name" required>
+        <div class="plan__summary-container">
+
+          <div class="plan__summary">
+            <p>Total</p>
+            <p>$20 / Month</p>
+          </div>
+
+          <article>
+            <img src="./resources/unlock-key.svg" alt="padlock icon">
+            <p>This environment is for demonstration purposes only. Please refrain from entering any actual sensitive
+              data.</p>
+          </article>
+        </div>
+
+        <img class="backdrop-image" src="./resources/Checkout-background@2x.png">
+      </div>
+    </fieldset>
+    <fieldset class="billing">
+      <div class="billing__wrapper">
+        <div class="billing__header">
+          <img class="logo" src="./resources/neuralite-logo.svg" alt="neuralite logo">
+          <h1>Upgrade to Plus</h1>
+          <p class="billing__title-description">Upgrade today and take your AI-powered productivity to the next level.</p>
+        </div>
+        <div class="billing__form">
+          <div class="billing__form-item">
+            <label for="billed-to" class="billing__title">Billed to</label>
+            <input type="text" id="billed-to" name="billed-to" placeholder="Enter first & last name"
+              autocomplete="name">
+          </div>
+          <div class="billing__form-item">
+
+            <p class="billing__title">Payment Details</p>
+
+            <div class="billing__option-container">
+
+              <label class="billing__card">
+                <input type="radio" name="payment-details" id="credit-card" value="credit-card">
+                <div class="billing__container">
+                  <img class="billing__image" src="./resources/atm-card.svg" alt="credit card icon">
+                  <p class="billing__description">Credit Card</p>
+                </div>
+              </label>
+
+              <label class="billing__card">
+                <input type="radio" name="payment-details" id="bank-transfer" value="bank-transfer">
+                <div class="billing__container">
+                  <img class="billing__image" src="./resources/bank.svg" alt="bank icon">
+                  <p class="billing__description">Bank Transfer</p>
+                </div>
+              </label>
+
+              <label class="billing__card">
+                <input type="radio" name="payment-details" id="points" value="points">
+                <div class="billing__container">
+                  <img class="billing__image" src="./resources/point-card.svg" alt="point diamond icon">
+                  <p class="billing__description">Points</p>
+                </div>
+              </label>
+
             </div>
 
-            <div class="contact-form__elem email">
-              <label for="email">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="Enter email address" autocomplete="email" required>
-            </div>
 
-            <div class="contact-form__elem country">
-              <label for="country">Country</label>
-              <select id="country" name="country" autocomplete="country" required>
+
+          </div>
+          <div class="billing__form-item">
+            <label for="email" class="billing__title">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="Enter email address" autocomplete="email">
+          </div>
+          <div class="billing__country-container">
+            <div class="billing__form-item">
+              <label for="country" class="billing__title">Country</label>
+              <select name="country" id="country" autocomplete="country-name">
                 <option value="Finland">Finland</option>
                 <option value="Nigeria">Nigeria</option>
                 <option value="USA">USA</option>
               </select>
             </div>
 
-            <div class="contact-form__elem postalcode">
-              <label for="postalcode">Postal Code</label>
-              <input id="postalcode" name="postalcode" type="text" placeholder="00270" autocomplete="postal-code">
+            <div class="billing__form-item">
+              <label for="postalcode" class="billing__title">Postal Code</label>
+              <input type="text" id="postalcode" name="postalcode" placeholder="00270" autocomplete="postal-code">
             </div>
 
-            <div class="contact-form__elem submit">
-              <button class="button" type="submit">Continue</button>
-            </div>
-
-          </form>
-
+          </div>
         </div>
-      </section>
-    </div>
-  </main>
+        <div class="billing__button-container">
+          <button class="button button-secondary">Cancel</button>
+          <button class="button button-primary">Subscribe</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  
 </body>
 
 </html>
