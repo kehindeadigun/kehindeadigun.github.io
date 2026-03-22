@@ -1,11 +1,15 @@
-const flipButton = document.querySelector("#flip-button");
-const coin = document.querySelector("#coin");
-const coinResult = document.querySelector("#coin-result");
+const data = document.querySelectorAll(".data__toggle");
+const list = document.querySelectorAll(".options li");
 
-function handleClick(event) {
-    let result = Math.random() < 0.5 ? "Heads" : "Tails";
-    coin.src = `./resources/${result.toLowerCase()}.svg`;
-    coinResult.textContent = result;
+function handleFAQClick ({target}) {
+    const dataElem = target.closest(".data");
+    desc = dataElem.querySelector(".data__description");
+    if (!desc) {return}
+    dataElem.classList.toggle("active");
+    dataElem.classList.toggle("padded");
+    target.classList.toggle("rotated");
+    desc.classList.toggle("hidden");    
 }
 
-flipButton.addEventListener("click", handleClick);
+
+data.forEach(ele => ele.addEventListener("click", handleFAQClick))
