@@ -8,7 +8,7 @@ function handleFAQClick ({target}) {
     dataElem.classList.toggle("active");
     dataElem.classList.toggle("padded");
     target.classList.toggle("rotated");
-    desc.classList.toggle("hidden");    
+    desc.classList.toggle("hidden");
 }
 
 
