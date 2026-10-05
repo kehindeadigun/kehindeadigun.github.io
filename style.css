@@ -169,6 +169,30 @@ h2 {
   color: var(--muted);
 }
 
+/* Projects */
+
+.projects {
+  padding: 2rem 0 3rem;
+}
+
+.projects__intro {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+}
+
+.grid--projects {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.card--text .card__body {
+  padding: 1.25rem;
+}
+
+.card--text .chips {
+  margin-top: 0.25rem;
+}
+
 /* Writing */
 
 .writing {
