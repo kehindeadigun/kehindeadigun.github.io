@@ -1,0 +1,341 @@
+:root {
+  --bg: #121826;
+  --surface: #212936;
+  --border: #394150;
+  --text: #f2f5f9;
+  --muted: #a1a9b6;
+  --accent: #845eee;
+  --accent-soft: rgba(132, 94, 238, 0.18);
+  --js: #f7c948;
+  --js-soft: rgba(247, 201, 72, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Intro */
+
+.intro {
+  padding: clamp(4rem, 12vw, 7rem) 0 3rem;
+  max-width: 640px;
+}
+
+.intro__hello {
+  color: var(--muted);
+}
+
+.intro__name {
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.intro__lead {
+  font-size: 1.125rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.links a:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+/* About */
+
+.about {
+  max-width: 640px;
+  padding: 2rem 0 3rem;
+}
+
+.about p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* Photo */
+
+.intro__photo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* Work */
+
+.work,
+.skills {
+  max-width: 640px;
+  padding: 2rem 0 3rem;
+}
+
+.work__note {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.work__list {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  border-left: 2px solid var(--border);
+  padding-left: 1.25rem;
+}
+
+.work__list h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.work__list p {
+  color: var(--muted);
+}
+
+/* Skills */
+
+.skills__groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.skills__groups dt {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips li {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* Writing */
+
+.writing {
+  padding: 2rem 0 3rem;
+}
+
+.grid--posts {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 760px;
+}
+
+.posts__date {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.post__excerpt {
+  color: var(--muted);
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.writing__more {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Challenges */
+
+.challenges {
+  padding: 2rem 0 4rem;
+}
+
+.challenges__intro {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  display: block;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg);
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+}
+
+.tag--css {
+  color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.tag--js {
+  color: var(--js);
+  background-color: var(--js-soft);
+}
+
+.card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.more > .grid {
+  margin-top: 1.5rem;
+}
+
+.more__toggle {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.more__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.more__toggle:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.more__toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.more__hide,
+.more[open] .more__show {
+  display: none;
+}
+
+.more[open] .more__hide {
+  display: inline;
+}
+
+/* The toggle sits after the extra cards once they are open */
+.more[open] {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.more[open] > .grid {
+  width: 100%;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
